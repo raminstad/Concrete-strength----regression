@@ -1,6 +1,6 @@
 # Concrete-strength----regression
 ![kisspng-cement-mixers-concrete-finisher-clip-art-cement-5acc1179519000 4040089215233232573341](https://user-images.githubusercontent.com/79353291/168522077-25f1c007-5c9b-4c09-b385-e4f4cb77849d.jpg)
-
+* [link for the notebook](https://github.com/raminstad/Concrete-strength----regression/blob/main/Final.ipynb)
 # Analysis objectives
 * Predict the compressive strength of concrete based on its age and ingredients
 * Compare the performance of regression algorithms such as: linear regression, lasso regression, ridge regression, k nearest neighbors, decision tree, random forest, support vector machine, and xgboost.
@@ -9,7 +9,7 @@
 * We will compare the performance of each model before and after hyperparameter tuning
 # Dataset that will be utilized
 * [link for the dataset](https://archive.ics.uci.edu/ml/datasets/concrete+compressive+strength)
-* [link for the notebook](https://github.com/raminstad/Concrete-strength----regression/blob/main/Final.ipynb)
+
 # Potential packages
 * Pandas
 * Numpy
