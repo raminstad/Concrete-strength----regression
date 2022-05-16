@@ -9,6 +9,13 @@
 # Dataset that will be utilized
 * [link for the dataset](https://archive.ics.uci.edu/ml/datasets/concrete+compressive+strength)
 * [link for the notebook](https://github.com/raminstad/Concrete-strength----regression/blob/main/Final.ipynb)
+# Potential packages
+* Pandas
+* Numpy
+* Matplotlib
+* Seaborn
+* Statsmodel
+* Sklearn
 # Exploratory data analysis
 * Descriptive statistics
 * Heatmap of correlation
