@@ -17,6 +17,9 @@
 * Pairplots
 * QQ-plots
 * Regression analysis
+# Data preprocessing
+* Drop duplicates
+* Min Max Scaler
 ### Regression analysis
 * In this step I fit a linear regression using the statsmodels package and I used the whole dataset for this part, the reason is that this is a data mining process and we want to find any hidden layer and patterns in the dataset.
 * Summary of the model:
@@ -40,3 +43,27 @@ We can see this plot is the same as residuals vs fitted and the only difference 
 <br>
 ##### Residuals vs Levarage:
 This plolt shows the outliers on Y given X, and it measures the cooks distance, we can see the graph is not showing any major outliers.
+
+# Model construction
+* We strat by making pipelines including the minmax scaler and the estimator on each pipeline and fit each model
+* Reason for using pipeline is to chain multiple process together, and also pipelines prevent data leackage when we are working with scalers
+* We predict on train and test sets to detect overfitting
+* We perform crossvalidation to detect overfitting and use it as the main score for model performance
+* ![output](https://user-images.githubusercontent.com/79353291/168520717-c298cd21-c715-414e-95ea-cab2f384cf7b.png)
+* We can see that the top left graph is the MSE on train vs test, top right is MAE train vs test, bottom left is R2 on train vs test, and bottom right is cross validation MAE.
+* Models that are overfitting are all of our tree based algorithms which are decsion tree, random forest, and xgboost
+* We can see how low the MAE is on the training set vs test set and also cross validation of those model is much higher than predicting on train set
+### Hyperparameter Tuning
+* We use gridsearch on knn, ridge, lasso, and decision tree
+* We use randomized gridsearch on random forest, svm, and xgboost
+* We only predict on the test set this time and also perform cross validation on each tuned model and compare the cross validation of pre tune and post tune models
+* ![output](https://user-images.githubusercontent.com/79353291/168521270-9dc17dff-6fa4-4d32-8050-964145bfeaa9.png)
+* We can see all of our models except knn had improvements after tuning
+#### Voting regressor 
+* In order to further tune our model, we can use an ensemble method were we can mix our top performing tuned models which are random forest, svm, and xgboost
+*  Fine tune the voting regressor using gridsearch
+*  Best parameters are weight of 1 to random forest and svm, and weight of 5 to xgboost
+*  We were able to get the best model with the lowest cross validation MAE using this model
+* ![output](https://user-images.githubusercontent.com/79353291/168521662-57a51635-0e61-4c08-ab3b-2c83bd66542a.png)
+###### Best model
+* Voting regressor with the cross validation score of 2.89
