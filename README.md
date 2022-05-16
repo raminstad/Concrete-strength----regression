@@ -1,5 +1,6 @@
 # Concrete-strength----regression
-![output](https://user-images.githubusercontent.com/79353291/168518515-5afbe493-ebfc-4c15-8d9b-ad2a071f2627.png)
+![kisspng-cement-mixers-concrete-finisher-clip-art-cement-5acc1179519000 4040089215233232573341](https://user-images.githubusercontent.com/79353291/168522077-25f1c007-5c9b-4c09-b385-e4f4cb77849d.jpg)
+
 # Analysis objectives
 * Predict the compressive strength of concrete based on its age and ingredients
 * Compare the performance of regression algorithms such as: linear regression, lasso regression, ridge regression, k nearest neighbors, decision tree, random forest, support vector machine, and xgboost.
